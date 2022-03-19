@@ -266,8 +266,8 @@ func MyProfile(c *gin.Context) {
 	claims := jwt.ExtractClaims(c)
 
 	user_email, _ := claims["email"]
-
-	username := "user" + user_email
+	_ = user_email
+	username := "user_useremail"
 	// username, _ := models.Rdb.HGet("user", "username").Result()
 
 	if username == "" {
